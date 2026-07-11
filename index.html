@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Sanctum</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="static/css/pico.min.css">
+    <link rel="stylesheet" href="static/css/custom.css">
+</head>
+<body>
+
+    <header class="container sanctum-header">
+        <div class="brand-link">THE SANCTUM</div>
+    </header>
+
+    <main class="container">
+        <div class="ledger-switcher">
+            <button class="switcher-btn active" data-ledger="favorites">CHRONICLE</button>
+            <button class="switcher-btn" data-ledger="backlog">QUEST</button>
+        </div>
+
+        <hr class="ledger-divider">
+
+        <div class="media-grid">
+            <section class="grid-column">
+                <div class="column-header">
+                    <h2>Books & Authors</h2>
+                </div>
+                <div id="books-container" class="column-content">Loading records...</div>
+            </section>
+
+            <section class="grid-column">
+                <div class="column-header">
+                    <h2>Movies & Series</h2>
+                </div>
+                <div id="movies-container" class="column-content">Loading records...</div>
+            </section>
+
+            <section class="grid-column">
+                <div class="column-header">
+                    <h2>Games (Board & PC)</h2>
+                </div>
+                <div id="games-container" class="column-content">Loading records...</div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="container dashboard-footer">
+        <small>The Sanctum // Created by George Freedom &copy; 2026</small>
+    </footer>
+
+    <script src="static/js/marked.min.js"></script>
+    <script>
+        const config = {
+            basePath: 'content', // Relative to root directory
+            types: ['books', 'movies', 'games']
+        };
+
+        async function fetchLedgerNode(type, ledger) {
+            const container = document.getElementById(`${type}-container`);
+            const targetUrl = `${config.basePath}/${ledger}/${type}.md`;
+
+            try {
+                const response = await fetch(targetUrl);
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                const markdownText = await response.text();
+                container.innerHTML = marked.parse(markdownText);
+            } catch (error) {
+                container.innerHTML = `<p class="error-log">Record [${type}.md] unavailable in ${ledger.toUpperCase()}.</p>`;
+            }
+        }
+
+        function loadLedger(ledgerName) {
+            config.types.forEach(type => fetchLedgerNode(type, ledgerName));
+        }
+
+        document.querySelectorAll('.switcher-btn').forEach(button => {
+            button.addEventListener('click', (e) => {
+                document.querySelectorAll('.switcher-btn').forEach(btn => btn.classList.remove('active'));
+                e.target.classList.add('active');
+                loadLedger(e.target.getAttribute('data-ledger'));
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', () => loadLedger('favorites'));
+    </script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+/* ==========================================================================
+   1. CORE DESIGN SYSTEM & COLOR THEMES
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Fira+Code:wght@400;500&family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
+
+:root {
+    --logbook-mono: "Fira Code", ui-monospace, monospace;
+    --typewriter-font: "Lora", Georgia, serif;
+    --arcane-font: "Cinzel", serif;
+}
+
+[data-theme="light"],
+html:not([data-theme="dark"]) {
+    --pico-background-color: #fdfbf7;
+    --pico-primary: #843d24;
+    --pico-primary-background: #843d24;
+    --pico-primary-hover: #a04e30;
+    --pico-border-color: #ebdcc5;
+    --pico-heading-color: #26120c;
+    --badge-bg: rgba(132, 61, 36, 0.06);
+    --badge-color: #843d24;
+}
+
+[data-theme="dark"] {
+    --pico-background-color: #0b0908;
+    --pico-primary: #ff9d5c;
+    --pico-primary-background: #ff9d5c;
+    --pico-primary-hover: #ffb380;
+    --pico-border-color: #241a16;
+    --pico-heading-color: #f4ebd9;
+    --badge-bg: rgba(255, 157, 92, 0.12);
+    --badge-color: #ffb380;
+}
+
+/* ==========================================================================
+   2. GLOBAL INTERACTION ELEMENTS
+   ========================================================================== */
+
+body {
+    font-family: var(--typewriter-font);
+    line-height: 1.5;
+    color: var(--pico-heading-color);
+}
+
+.brand-link {
+    font-family: var(--arcane-font);
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: var(--pico-heading-color) !important;
+}
+
+.sanctum-header {
+    text-align: center;
+    margin-top: 2.5rem;
+    margin-bottom: 0;
+}
+
+.sanctum-header .brand-link {
+    font-size: 1.8rem;
+    user-select: none;
+}
+
+/* ==========================================================================
+   3. THE SPLIT LEDGER UI ENGINE (TABS)
+   ========================================================================== */
+
+.ledger-switcher {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.switcher-btn {
+    font-family: var(--arcane-font);
+    letter-spacing: 1px;
+    background-color: transparent;
+    border: 1px solid var(--pico-border-color);
+    color: var(--pico-muted-color);
+    width: auto;
+    padding: 0.6rem 2rem;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.switcher-btn:hover {
+    background-color: var(--badge-bg);
+    border-color: var(--pico-primary);
+    color: var(--pico-primary);
+}
+
+.switcher-btn.active {
+    background-color: transparent;
+    color: var(--pico-primary) !important;
+    border-color: var(--pico-primary);
+    box-shadow: 0 0 15px rgba(255, 157, 92, 0.15);
+    font-weight: bold;
+}
+
+.ledger-divider {
+    border-color: var(--pico-border-color);
+    margin: 2.5rem 0;
+    opacity: 0.6;
+}
+
+/* ==========================================================================
+   4. THREE-COLUMN ASYNCHRONOUS GRID
+   ========================================================================== */
+
+.media-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+@media (min-width: 992px) {
+    .media-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.grid-column {
+    background: transparent;
+}
+
+.column-header h2 {
+    font-family: var(--arcane-font);
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    border-bottom: 1px solid var(--pico-border-color);
+    padding-bottom: 0.6rem;
+    margin-bottom: 1.8rem;
+    text-transform: uppercase;
+}
+
+/* ==========================================================================
+   5. MARKDOWN NODES INJECTION STYLING
+   ========================================================================== */
+
+.column-content ul {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.column-content li {
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+}
+
+.column-content li strong {
+    font-family: var(--typewriter-font);
+    font-weight: 600;
+    color: var(--pico-heading-color);
+    display: inline-block;
+    margin-bottom: 0.2rem;
+}
+
+.column-content li code {
+    font-family: var(--logbook-mono);
+    background-color: var(--badge-bg);
+    color: var(--badge-color);
+    font-size: 0.75rem;
+    padding: 0.15rem 0.45rem;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+    vertical-align: middle;
+    margin-left: 0.5rem;
+    border: 1px solid rgba(255, 157, 92, 0.15);
+}
+
+/* Blockquote parsing for the single commentary layer */
+.column-content p {
+    margin-top: 0.4rem;
+    margin-bottom: 0;
+    color: var(--pico-muted-color);
+    font-size: 0.9rem;
+    padding-left: 0.75rem;
+    border-left: 1px solid var(--pico-border-color);
+    font-style: italic;
+}
+
+/* Fix for marked.js loose lists (wrapping single items in paragraphs) */
+.column-content li p:first-child {
+    color: inherit;
+    font-style: normal;
+    font-size: inherit;
+    padding: 0;
+    border: none;
+    margin: 0;
+    display: inline;
+}
+
+.error-log {
+    font-family: var(--logbook-mono);
+    font-size: 0.8rem;
+    color: #c96f53;
+}
+
+/* ==========================================================================
+   6. GLOBAL FOOTER
+   ========================================================================== */
+
+.dashboard-footer {
+    margin-top: 6rem;
+    padding: 2.5rem 0;
+    border-top: 1px solid var(--pico-border-color);
+    text-align: center;
+    font-family: var(--arcane-font);
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    opacity: 0.7;
+}
