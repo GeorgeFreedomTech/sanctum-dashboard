@@ -1,5 +1,19 @@
 -- Movies --
 
+* **Evil Dead** 1981 `Horror`
+
+* **Steel Dawn** 1987 `Postapo`
+
+* **Fracture** 2007 `Drama`
+
+* **Taken / 96 hodin** 2008 `Thriller`
+
+* **Hollow Man** 2000 `Thriller`
+
+* **The Hangover Part III** 2013 `Comedy`
+
+* **The Great Escape** 1963 `Drama/War`
+
 * **Soldaat van Oranje** 1977 `Drama/War`
 
 * **The hill** - 1964 `Drama/War`
