@@ -2,7 +2,7 @@
 
 A minimalist, simple tracking dashboard designed as a personal media log for **George Freedom**. 
 
-Built with an intentional "wizard’s study / arcane knowledge" aesthetic—featuring deep obsidian dark modes, glowing candle-flame amber accents, and sharp typography locks. It operates on a zero-backend architecture with client-side Markdown execution, zero tracking, and absolute data ownership. Maps three categories (Books, Movies, Games) split into **Chronicle** (finished) and **Quest** (to watch/read/play list).
+Built with an intentional "wizard’s study / arcane knowledge" aesthetic — obsidian dark and glowing candle-flame accents. Zero-backend architecture with client-side Markdown execution, zero tracking, and absolute data ownership. Maps three categories (Books, Movies, Games) split into **Chronicle** (finished) and **Quest** (to watch/read/play list).
 
 ## Tech Stack
 
