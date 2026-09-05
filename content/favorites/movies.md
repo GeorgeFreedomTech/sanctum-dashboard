@@ -1,5 +1,3 @@
-`work in progress .. `
-
 -- Movies --
 
 * **The Ministry of Ungentlemanly Warfare** - 2024 `War/Action`
@@ -464,7 +462,7 @@
 
 * **God Forgives... I Don't! / Bůh odpouští, já ne** - 1967 `Western/Adventure` 
 
-* **The Valley of the Bees / Údolí včel** - 1967 `History/Drama` 
+* **The Valley of Bees / Údolí včel** - 1967 `History/Drama` 
 
 * **Le Grand Restaurant / Grand restaurant pana Septima** - 1966 `Comedy`
 

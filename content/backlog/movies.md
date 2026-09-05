@@ -2,6 +2,8 @@
 
 * **Evil Dead** 1981 `Horror`
 
+* **Razorback** 1984 `Horror`
+
 * **Steel Dawn** 1987 `Postapo`
 
 * **Fracture** 2007 `Drama`

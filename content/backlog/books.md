@@ -2,13 +2,15 @@
 
 * finish: **Basilisk** – Matt Wixey `Hackery`
 
-* **Exadelic** – Jon Evans `Sci-Fi`
+* finish: **Exadelic** – Jon Evans `Sci-Fi`
 
 * **Leviathan Wakes** - James S. A. Corey `Sci-Fi`
 
 * **The Forever War** - Joe Haldeman `Sci-Fi`
 
 * **3. Delta-V** - Daniel Suarez `Sci-Fi` 
+
+* **The Dying Earth** - Jack Vance `Fantasy & Sci-Fi`
 
 -- Series --
 
