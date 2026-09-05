@@ -316,6 +316,8 @@
 
 * **Lethal Weapon** - 1987 `Action/Thriller`
 
+* **Veiviseren / Ofelaš / Pathfinder / Stopař** - 1987 `Survival/History`
+
 * **Escape from Sobibor** - 1987 `War/Drama`
 
 * **Wall Street** - 1987 `Drama/Crime`

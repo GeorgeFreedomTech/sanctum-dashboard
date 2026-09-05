@@ -42,8 +42,6 @@
 
 * **They live** - 1988 `Postapo`
 
-* **Veiviseren / Ofelaš / Pathfinder / Stopař** - 1987 `Drama/History`
-
 * **Terror** - 1978 `Horror`
 
 * **Conspiracy** - 2001 `War/Drama`
@@ -53,6 +51,8 @@
 * **T2 Trainspotting** - 2017 `Drama`
 
 * rewatch: **La Folie des grandeurs / Pošetilost mocných** - 1971 `Comedy`
+
+* rewatch: **Excalibur** - 1981 `Fantasy/Adventure`
 
 -- Series --
 
@@ -68,4 +68,4 @@
 
 * rewatch: **Robin of Sherwood** - 1986 `History/Adventure`
 
-* rewatch: **Excalibur** - 1981 `Fantasy/Adventure`
+
